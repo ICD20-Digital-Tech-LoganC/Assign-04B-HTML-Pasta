@@ -1,4 +1,6 @@
-/* Created by: Mr. Coxall
-* Created on: Sep 2020
-* This file contains the CSS for index.html
-*/
+h1 {
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  text-align: left;
+}
