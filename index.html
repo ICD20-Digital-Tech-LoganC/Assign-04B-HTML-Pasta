@@ -1,61 +1,203 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html>
-  <head>
-    
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="./images/favicon_io/site.webmanifest">
 
-    <!-- Meta Data -->
-    <meta charset="utf-8">
-    <meta name="description" content="Pasta Food Order Website">
-    <meta name="keywords" content="immaculata, ics2o, Food, Pasta">
-    <meta name="author" content="Logan Connors">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
 
-    <!-- Google's MDL -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css"/>
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="./images/favicon_io/site.webmanifest">
 
-    <!-- Title -->
-    <title>Pasta Food Order</title>
+  <!-- Meta Data -->
+  <meta charset="utf-8">
+  <meta name="description" content="Pasta Food Order Website">
+  <meta name="keywords" content="immaculata, ics2o, Food, Pasta">
+  <meta name="author" content="Logan Connors">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Stylesheet -->
-    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+  <!-- Google's MDL -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" />
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-    <!-- JS -->
-    <script src="./js/script.js"></script>
-    
-  </head>
-  
-  <body>
+  <!-- Title -->
+  <title>Pasta Food Order</title>
 
-    <h1>Pasta Food Order</h1>
-    
-    <table>
+  <!-- Stylesheet -->
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+
+  <!-- JS -->
+  <script src="./js/script.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Title Header -->
+  <h1>Pasta Food Order</h1>
+
+  <!-- Dropdown menu for Pasta Type -->
+  <form id="entryForm">
+    <label for="pastaType">Choose your pasta type:</label>
+    <select id="pastaType" name="pastaType">
+      <option value="none">Select your pasta type</option>
+      <option value="0.00">Fettuccine</option>
+      <option value="0.00">Farfalle</option>
+      <option value="0.00">Fusilli</option>
+      <option value="0.00 ">Penne </option>
+      <option value="0.00 ">Orecchiette </option>
+      <option value="0.00">Ravioli</option>
+    </select>
+  </form>
+
+  <aside>
+
+    <!-- Image of Pasta -->
+    <img src="./images/pasta_noodle.jpg" alt="Pasta">
+    <br>
+
+    <!-- Display receipt of users order -->
+    <p id="receipt"></p>
+    <p>Receipt: </p>
+
+  </aside>
+
+  <!-- Radio Buttons for Pasta Size -->
+  <div id="radio-buttons">
+    <p>Choose your Pasta Size: </p>
+    <input type="radio" id="No_pasta" name="pasta_size" value="0.00" checked>
+    <label for="size">No Pasta</label><br>
+    <input type="radio" id="Child_Pasta" name="pasta_size" value="3.75">
+    <label for="size">Child $3.75</label><br>
+    <input type="radio" id="Small_Pasta" name="pasta_size" value="5.00">
+    <label for="size">Small $5.00</label><br>
+    <input type="radio" id="Medium_Pasta" name="pasta_size" value="7.00">
+    <label for="size">Medium $7.00</label><br>
+    <input type="radio" id="Large_Pasta" name="pasta_size" value="9.50">
+    <label for="size">Large $9.50</label><br>
+    <input type="radio" id="Family_Pasta" name="pasta_size" value="14.00">
+    <label for="size">Family $14.00</label><br>
+  </div>
+
+  <!-- header for toppings -->
+  <h6>Toppings</h6>
+
+  <!-- Check Boxes for Pasta Topppings -->
+  <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <thead>
       <tr>
-        <th>Hello</th>
-        <th>World</th>
+        <th class="mdl-data-table__cell--non-numeric" id="topping1">Toppings</th>
+        <th>price</th>
       </tr>
-      
+    </thead>
+    <tbody>
       <tr>
-        <td>One</td>
-        <td>1</td>
+        <td class="mdl-data-table__cell--non-numeric" id="topping2">Chick-Fil-A Sauce</td>
+        <td>$1.00</td>
       </tr>
-    </table>
-    
-  </body>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="topping3">Meatballs</td>
+        <td>$1.00</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="topping4">Turkey</td>
+        <td>$1.00</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="topping5">Chicken</td>
+        <td>$1.00</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="topping6">Feta</td>
+        <td>$0.50</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="topping7">Mozzarella</td>
+        <td>$0.50</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="topping8">Basil</td>
+        <td>$0.25</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="topping9">Rosemary</td>
+        <td>$0.25</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="topping10">Red Pepper Flakes</td>
+        <td>$0.25</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="topping11">Oregano</td>
+        <td>$0.25</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="topping12">Marinara Sauce</td>
+        <td>$0.00</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="topping13">Pesto Sauce</td>
+        <td>$0.00</td>
+      </tr>
+    </tbody>
+  </table>
 
-  <footer class="mdl-mini-footer">
-    <div class="mdl-mini-footer__left-section">
-      <div class="mdl-logo">Pasta Food Order</div>
-      <ul class="mdl-mini-footer__link-list">
-        <li><a href="https://github.com/ICD20-Digital-Tech-LoganC/Assign-04B-HTML-Pasta-Food-Order">Github</a></li>
-      </ul>
-    </div>
-  </footer>
-  
+  <!-- header for sides -->
+  <h6>Sides</h6>
+
+  <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <thead>
+      <tr>
+        <th class="mdl-data-table__cell--non-numeric">Sides</th>
+        <th>price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="side1">Salad</td>
+        <td>$3.00</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="side2">Coke</td>
+        <td>$2.00</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="side3">Pepsi</td>
+        <td>$2.00</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="side4">Water</td>
+        <td>$1.00</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="side5">Milk</td>
+        <td>$1.00</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric" id="side6">Iced tea</td>
+        <td>$1.00</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <!-- Button to calculate total -->
+  <button onclick="pastaOrder()" class="styled-button">Complete Order</button>
+
+</body>
+<br><br><br>
+
+<!-- Footer -->
+<footer class="mdl-mini-footer">
+  <div class="mdl-mini-footer__left-section">
+    <div class="mdl-logo">Pasta Food Order</div>
+    <ul class="mdl-mini-footer__link-list">
+      <li><a href="https://github.com/ICD20-Digital-Tech-LoganC/Assign-04B-HTML-Pasta-Food-Order">Github</a></li>
+    </ul>
+  </div>
+</footer>
+
 </html>

@@ -1,6 +1,79 @@
+/* style.css */
+
 h1 {
-  color: #000000;
+  color: navy;
   font-family: "Times New Roman", Times, serif;
   font-size: 40px;
   text-align: left;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+aside {
+  float: right;
+  font-style: italic;
+  background-color: white;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #f2f2f2;
+}
+
+#entryForm {
+  margin: 20px;
+}
+
+#receipt {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: green;
+}
+
+#radio-buttons {
+  margin: 20px;
+}
+
+.mdl-data-table {
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+.mdl-data-table th,
+.mdl-data-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.mdl-shadow--2dp {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.styled-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.styled-button:hover {
+  background-color: #45a049;
+}
+
+.styled-button:active {
+  background-color: #3e8e41;
 }
